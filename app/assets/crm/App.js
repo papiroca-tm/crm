@@ -17,7 +17,7 @@ Ext.application({
     ],
 
     controllers: [
-        // 'someController'
+        'crm.controller.MainMenuCtrl'
     ],
 
     models: [

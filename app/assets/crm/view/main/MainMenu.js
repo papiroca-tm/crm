@@ -15,36 +15,27 @@ Ext.define('crm.view.main.MainMenu', {
                 scale: 'large',
                 text: 'Задачи',
                 width: 100,
-                handler: function() {
-                    console.log('handler btnB');
-                }
+                action: 'onTaskBtnClick'
             },
             {
                 xtype:'button',
                 scale: 'large',
                 text: 'Справочники',
                 width: 100,
-                handler: function() {
-                    console.log('handler btnC');
-                }
+                action: 'onReferencesBtnClick'
             },
             {
                 xtype:'button',
                 scale: 'large',
                 text: 'Отчеты',
                 width: 100,
-                handler: function() {
-                    console.log('handler btnD');
-                }
+                action: 'onReportsBtnClick'
             },
             {
                 xtype:'button',
                 scale: 'large',
                 text: 'Сообщество',
-                width: 100,
-                handler: function() {
-                    console.log('handler btnD');
-                }
+                action: 'onCommunityBtnClick'
             }
         ]
     },
