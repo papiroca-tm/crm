@@ -35,10 +35,14 @@ Ext.define('crm.controller.MainMenuCtrl', {
     onReferencesBtnClick: function() {
         console.log('onReferencesBtnClick');
         var menu = this.getMainMenu();
-        console.dir(menu);
-        menu.add(
-            {xtype: 'referencesMenu'}
-        );
+        var cmp = menu.down("referencesMenu");
+        if (!cmp) {
+            menu.add(
+                {xtype: 'referencesMenu'}
+            );
+        }
+        // todo: далее необходимо переносить логику в контроллер меню справочников
+
     },
 
     onReportsBtnClick: function() {

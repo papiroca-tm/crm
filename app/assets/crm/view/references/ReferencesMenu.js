@@ -1,7 +1,6 @@
 Ext.define('crm.view.references.ReferencesMenu', {
     extend: 'Ext.tree.Panel',
     alias: 'widget.referencesMenu',
-
     requires: [
         'crm.store.ReferencesMenuStore'
     ],
