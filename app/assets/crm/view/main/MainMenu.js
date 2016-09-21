@@ -35,21 +35,12 @@ Ext.define('crm.view.main.MainMenu', {
                 xtype:'button',
                 scale: 'large',
                 text: 'Сообщество',
+                width: 100,
                 action: 'onCommunityBtnClick'
             }
         ]
     },
     items: [
-        // {
-        //     xtype: 'menu',
-        //     width: '100%',
-        //     height: 500,
-        //     plain: true,
-        //     border: false,
-        //     // floating: false,  // usually you want this set to True (default)
-        //     store: 'SearchStore',
-        //     showEmptyMenu: true,
-        //     fields: ['id', 'groupe', 'text']
-        // }
+
     ]
 });

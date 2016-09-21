@@ -5,16 +5,11 @@ activatorPath="/home/papiroca/scala-proj/activator/bin"
 
 # подключаем nodejs к SBT что бы все компилилось и собиралось быстро
 export SBT_OPTS="${SBT_OPTS} -Dsbt.jse.engineType=Node -Dsbt.jse.command=$(which nodejs)"
-echo ${SBT_OPTS}
 
 # в переменную окружения кидаем путь до активатора
 if [ -s ${activatorPath} ] && [[ ":"$PATH":" != *":"${activatorPath}":"* ]]; then
     export PATH=$PATH:${activatorPath}
-#    echo "activatorPath add to PATH"
-#    echo $PATH
 fi
-
-
 
 echo "SELECT ACTIVATOR OPTION:"
 echo "########################"

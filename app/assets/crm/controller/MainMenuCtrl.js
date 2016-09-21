@@ -1,12 +1,17 @@
 Ext.define('crm.controller.MainMenuCtrl', {
     extend: 'Ext.app.Controller',
-    views: ['crm.view.main.MainMenu'],
+
+    views: [
+        'crm.view.main.MainMenu',
+        'crm.view.references.ReferencesMenu'
+    ],
     // stores: [],
     refs: [
         {ref: 'mainMenu', selector: 'mainMenu'}
     ],
 
     init: function() {
+        this.callParent();
         this.control({
             'mainMenu  button[action="onTaskBtnClick"]': {
                 "click": this.onTaskBtnClick
@@ -29,6 +34,11 @@ Ext.define('crm.controller.MainMenuCtrl', {
 
     onReferencesBtnClick: function() {
         console.log('onReferencesBtnClick');
+        var menu = this.getMainMenu();
+        console.dir(menu);
+        menu.add(
+            {xtype: 'referencesMenu'}
+        );
     },
 
     onReportsBtnClick: function() {
