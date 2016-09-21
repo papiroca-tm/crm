@@ -17,7 +17,8 @@ Ext.application({
     ],
 
     controllers: [
-        'crm.controller.MainMenuCtrl'
+        'crm.controller.MainMenuCtrl',
+        'crm.controller.ReferencesMenuCtrl'
     ],
 
     models: [

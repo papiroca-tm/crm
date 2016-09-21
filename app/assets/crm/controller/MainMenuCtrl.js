@@ -41,8 +41,6 @@ Ext.define('crm.controller.MainMenuCtrl', {
                 {xtype: 'referencesMenu'}
             );
         }
-        // todo: далее необходимо переносить логику в контроллер меню справочников
-
     },
 
     onReportsBtnClick: function() {
