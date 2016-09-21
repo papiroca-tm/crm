@@ -26,22 +26,18 @@ Ext.application({
 
     stores: [
         // 'someStore',
-        'crm.store.TmpStore'
+        'crm.store.ReferencesMenuStore'
     ],
 
     init: function() {
         console.info('app: init');
         window.app = this;
-
         Ext.Date.dayNames = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 
         // var myLocalStore;
         // myLocalStore = Ext.state.LocalStorageProvider.create();
         // Ext.state.Manager.setProvider(myLocalStore);
 
-        // app.loadingMessage('Запуск...');
-        // window.crm = window.crm || { app: this };
-        // app.hideLoadingMessage();
         console.info('app: init: control');
         app.control({
             // 'appHeader button[action=logout]': {
@@ -63,18 +59,6 @@ Ext.application({
             cmp = Ext.create('crm.view.Viewport');
         }
         return cmp;
-    },
-
-    loadingMessage: function(value) {
-        return Ext.get('loading-msg').update(value);
-    },
-
-    hideLoadingMessage: function() {
-        Ext.get('loading').remove();
-        return Ext.fly('loading-mask').animate({
-            opacity: 0,
-            remove: true
-        });
     }
 
 });
