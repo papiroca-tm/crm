@@ -15,11 +15,13 @@
 
 # root
 GET     /                                           controllers.MainCtrl.root
+
 # assets files
 GET     /assets/*file                               controllers.Assets.at(path="/public/", file)
 GET     /ext/*file                                  controllers.Assets.at(path="/public/ext", file)
 GET     /crm/*file                                  controllers.Assets.at(path="/public/crm", file)
 GET     /crm/view/*file                             controllers.Assets.at(path="/public/crm/view", file)
 
-
-POST    /references/add                             controllers.MainCtrl.referencesAdd
+# references
+POST    /references/add                             controllers.ReferencesCtrl.referencesAdd
+GET     /references/getRefTree                      controllers.ReferencesCtrl.getRefTree

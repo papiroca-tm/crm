@@ -46,6 +46,7 @@ Ext.define('crm.controller.ReferencesMenuCtrl', {
                 params : data,
                 success: function(conn, response, options, eOpts) {
                     console.info('references/add');
+                    // todo: что когда данные сервером успешно обработаны?
                     // console.dir(conn);
                     // console.dir(conn.responseText);
                     // console.dir(response);
@@ -54,6 +55,7 @@ Ext.define('crm.controller.ReferencesMenuCtrl', {
                 },
                 failure: function(conn, response, options, eOpts) {
                     console.error('references/add');
+                    // todo: что когда сервер не справился?
                     // console.dir(conn);
                     // console.dir(conn.responseText);
                     // console.dir(response);
