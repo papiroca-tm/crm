@@ -20,3 +20,6 @@ GET     /assets/*file                               controllers.Assets.at(path="
 GET     /ext/*file                                  controllers.Assets.at(path="/public/ext", file)
 GET     /crm/*file                                  controllers.Assets.at(path="/public/crm", file)
 GET     /crm/view/*file                             controllers.Assets.at(path="/public/crm/view", file)
+
+
+POST    /references/add                             controllers.MainCtrl.referencesAdd

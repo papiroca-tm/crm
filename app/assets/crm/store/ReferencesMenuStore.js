@@ -3,13 +3,13 @@ Ext.define('crm.store.ReferencesMenuStore', {
     root: {
         expanded: true,
         children: [
-            { text: "Отдел разработки", children: [
-                { text: "JavaScript", leaf: true },
-                { text: "CoffeeScript", leaf: true}
+            { id: 'oit', text: "Отдел разработки", children: [
+                { id: 'js', text: "JavaScript", leaf: true },
+                { id: 'cs', text: "CoffeeScript", leaf: true}
             ] },
-            { text: "Отдел техводдержки", children: [ // , expanded: true
-                { text: "Оборудование", leaf: true },
-                { text: "что то еще", leaf: true}
+            { id: 'sup', text: "Отдел техводдержки", children: [ // , expanded: true
+                { id: 'device', text: "Оборудование", leaf: true },
+                { id: 'someShit', text: "что то еще", leaf: true}
             ] }
         ]
     }

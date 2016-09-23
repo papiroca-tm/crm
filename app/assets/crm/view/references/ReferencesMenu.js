@@ -3,7 +3,7 @@ Ext.define('crm.view.references.ReferencesMenu', {
     alias: 'widget.referencesMenu',
     requires: [
         'Ext.button.Button',
-        'Ext.toolbar.Spacer',
+        'Ext.form.Label',
         'crm.store.ReferencesMenuStore'
     ],
 
@@ -30,7 +30,7 @@ Ext.define('crm.view.references.ReferencesMenu', {
                 xtype:'button',
                 scale: 'small',
                 text: 'изменить',
-                action: 'onRemoveBtnClick'
+                action: 'onChangeBtnClick'
             }
         ]
     },
@@ -38,5 +38,10 @@ Ext.define('crm.view.references.ReferencesMenu', {
     width: '100%',
     store: 'crm.store.ReferencesMenuStore',
     rootVisible: true,
-    border: false
+    border: false,
+    listeners: {
+        itemclick : function(tree, record, item, index, e, options) {
+            console.log('ReferencesMenu: itemclick');
+        }
+    }
 });
