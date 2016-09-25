@@ -10,6 +10,8 @@ libraryDependencies ++= Seq(
   jdbc,
   cache,
   ws,
-  "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test
+  "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
+  "org.mongodb" %% "casbah" % "3.1.1"
 )
-
+//resolvers += "Sonatype releases" at "https://oss.sonatype.org/content/repositories/releases"
+//resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
