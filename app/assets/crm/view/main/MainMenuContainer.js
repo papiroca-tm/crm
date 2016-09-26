@@ -8,7 +8,7 @@ Ext.define('crm.view.main.MainMenuContainer', {
         'crm.view.main.MainMenu'
     ],
 
-    title: 'PAPIROCA CRM',
+    title: 'CRM',
     id: 'main-menu-container',
     region:'west',
     collapsible: true,

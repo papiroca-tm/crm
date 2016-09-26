@@ -3,7 +3,7 @@ Ext.define('crm.view.Viewport', {
     alias: 'widget.appViewport',
 
     stores: [
-        'crm.store.TmpStore'
+        // 'crm.store.TmpStore'
     ],
 
     requires: [
