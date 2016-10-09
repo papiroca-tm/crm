@@ -11,7 +11,7 @@ class AppConfig @Inject()(playConfig: Configuration) {
 }
 
 object ConfigReader {
-  val config = new AppConfig(Configuration.load(Environment.simple()))
-  def getDbHost: String = config.dbHost.getOrElse("localhost")
-  def getDbPort: Long = config.dbPort.getOrElse(27017)
+  private val config = new AppConfig(Configuration.load(Environment.simple()))
+  val DB_HOST: String = config.dbHost.getOrElse("localhost")
+  val DB_PORT: Long = config.dbPort.getOrElse(27017)
 }
