@@ -1,0 +1,3 @@
+[submodule "app/scalaLogit"]
+	path = app/scalaLogit
+	url = https://github.com/papiroca-tm/scalaLogit.git

@@ -3,8 +3,9 @@ package controllers
 //import com.mongodb.casbah.MongoClient
 import play.api.libs.json._
 import play.api.mvc._
-import services.Log.LogMode
-import services.{ConfigReader, Log}
+import services.ConfigReader
+import scalaLogit.Log
+import scalaLogit.Log.LogMode
 
 
 class ReferencesCtrl extends Controller {
