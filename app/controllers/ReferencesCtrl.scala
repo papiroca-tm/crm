@@ -45,7 +45,6 @@ class ReferencesCtrl extends Controller {
         RefItem(2, "техподдержка", leaf = false, children = List())
       )
     )
-
     Ok(Json.toJson(references))
   }
 
