@@ -1,9 +1,10 @@
 package controllers
 
 //import com.mongodb.casbah.MongoClient
-import play.api.Logger
 import play.api.libs.json._
 import play.api.mvc._
+import services.Log.LogMode
+import services.{ConfigReader, Log}
 
 
 class ReferencesCtrl extends Controller {
@@ -13,11 +14,26 @@ class ReferencesCtrl extends Controller {
 //    val text = reqBody.("text")
 //    val leaf = reqBody.("leaf")
 //    val path = reqBody.("path")
+
     Ok("ok")
   }
 
+
   def getRefTree = Action { request =>
-    Logger.debug("getRefTree")
+    println(ConfigReader.getDbHost)
+    println(ConfigReader.getDbPort)
+
+    Log.info("какой то текст лога")
+    Log.debug("какой то текст лога")
+    Log.warn("какой то текст лога")
+    Log.success("какой то текст лога")
+    Log.error("какой то текст лога")
+    Log.info("какой то текст лога", LogMode.FULL)
+    Log.debug("какой то текст лога", LogMode.FULL)
+    Log.warn("какой то текст лога", LogMode.FULL)
+    Log.success("какой то текст лога", LogMode.FULL)
+    Log.error("какой то текст лога", LogMode.FULL)
+
     //todo:  работаем с mongodb
 //    val mongoClient = MongoClient("localhost", 27017)
 //    println(mongoClient)
@@ -35,7 +51,7 @@ class ReferencesCtrl extends Controller {
     }
 
     implicit val refRootWrites = new Writes[ReferencesRoot] {
-      def writes(refRoot: ReferencesRoot) = Json.toJson(  // Json.arr( - получался массив в массиве, поэтому заменил на Json.toJson(
+      def writes(refRoot: ReferencesRoot) = Json.toJson(
         refRoot.refItems
       )
     }
@@ -54,6 +70,9 @@ class ReferencesCtrl extends Controller {
   }
 
 }
+
+
+
 
 //    val myJsonStr: JsValue = Json.parse("""
 //                                       [
