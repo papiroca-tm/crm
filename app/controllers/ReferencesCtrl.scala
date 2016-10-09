@@ -46,5 +46,6 @@ class ReferencesCtrl extends Controller {
       )
     )
     Ok(Json.toJson(references))
+
   }
 }
